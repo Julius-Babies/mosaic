@@ -83,7 +83,7 @@ repository {
   }
 }
 dependencies {
-  implementation("com.jakewharton.mosaic:mosaic-runtime:0.19.0-SNAPSHOT")
+  implementation("com.jakewharton.mosaic:mosaic-runtime:0.20.0-SNAPSHOT")
 }
 ```
 
