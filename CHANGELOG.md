@@ -1,13 +1,22 @@
 # Change log
 
 ## [Unreleased]
-[Unreleased]: https://github.com/Julius-Babies/mosaic/compare/0.20.0...HEAD
+[Unreleased]: https://github.com/Julius-Babies/mosaic/compare/0.20.1...HEAD
+
+
+## [0.20.1] - 2026-07-25
+[0.20.1]: https://github.com/Julius-Babies/mosaic/releases/tag/0.20.1
+
+Changed:
+- Rename the published artifacts from `es.jvbabi:mosaic-*` to `es.jvbabi:mosaic-fork-*`
+  to make the fork explicit in the coordinates. The `es.jvbabi:mosaic-*:0.20.0` artifacts
+  are superseded and should not be used.
 
 
 ## [0.20.0] - 2026-07-24
 [0.20.0]: https://github.com/Julius-Babies/mosaic/releases/tag/0.20.0
 
-This is a fork of [JakeWharton/mosaic](https://github.com/JakeWharton/mosaic) published as `es.jvbabi:mosaic-*`
+This is a fork of [JakeWharton/mosaic](https://github.com/JakeWharton/mosaic) published as `es.jvbabi:mosaic-fork-*`
 for use by [werkbank](https://github.com/Julius-Babies/werkbank/).
 
 Fixed:

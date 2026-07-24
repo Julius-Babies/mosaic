@@ -7,7 +7,7 @@
 > (graceful handling of out-of-bounds pixel access during terminal resize) as a published artifact.
 >
 > Compared to upstream it is **Kotlin/Native only** — all JVM targets (including the JNI and Zig
-> tooling) have been removed. It is published as `es.jvbabi:mosaic-*` purely for use by
+> tooling) have been removed. It is published as `es.jvbabi:mosaic-fork-*` purely for use by
 > [Julius-Babies/werkbank](https://github.com/Julius-Babies/werkbank/) and is not intended as a
 > general-purpose replacement for upstream Mosaic. Use the original project unless you specifically
 > need this fix on native targets.
@@ -77,7 +77,7 @@ Mosaic itself can then be added like any other dependency:
 
 ```groovy
 dependencies {
-  implementation("es.jvbabi:mosaic-runtime:0.18.0")
+  implementation("es.jvbabi:mosaic-fork-runtime:0.20.1")
 }
 ```
 
@@ -95,7 +95,7 @@ repository {
   }
 }
 dependencies {
-  implementation("es.jvbabi:mosaic-runtime:0.19.0-SNAPSHOT")
+  implementation("es.jvbabi:mosaic-fork-runtime:0.21.0-SNAPSHOT")
 }
 ```
 
