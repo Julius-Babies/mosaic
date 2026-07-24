@@ -104,60 +104,12 @@ jobs:
           macosArm64Test
           -x :mosaic-tty:macosArm64Test
 
-  docs:
-    runs-on: macos-15
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-java@v5
-        with:
-          distribution: 'zulu'
-          java-version-file: .github/workflows/.java-version
-      - uses: gradle/actions/setup-gradle@v6
-
-      - run: ./gradlew dokkaGenerate
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: html-docs
-          path: build/dokka/html/
-          if-no-files-found: error
-
-  samples:
-    strategy:
-      fail-fast: false
-      matrix:
-        platform:
-          - os: macos-15
-            target: macosArm64
-          - os: ubuntu-24.04
-            target: linuxX64
-          - os: windows-2025
-            target: mingwX64
-        sample:
-          - counter
-          - jest
-    runs-on: ${{ matrix.platform.os }}
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-java@v5
-        with:
-          distribution: 'zulu'
-          java-version-file: .github/workflows/.java-version
-      - uses: gradle/actions/setup-gradle@v6
-
-      - run: |
-          ./gradlew -p samples/${{ matrix.sample }} linkReleaseExecutable${{ matrix.platform.target }}
-          ./samples/${{ matrix.sample }}/build/bin/${{ matrix.platform.target }}/releaseExecutable/${{ matrix.sample }}.*
-        shell: bash
-
   final-status:
     if: ${{ !cancelled() }}
     runs-on: ubuntu-slim
     needs:
-      - docs
       - tty-tests
       - build
-      - samples
     steps:
       - name: Check
         run: |
@@ -166,37 +118,3 @@ jobs:
             echo "One or more required jobs failed"
             exit 1
           fi
-
-  publish:
-    if: ${{ github.ref == 'refs/heads/trunk' && github.repository == 'Julius-Babies/mosaic' }}
-    runs-on: macos-15
-    needs:
-      - final-status
-
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-java@v5
-        with:
-          distribution: 'zulu'
-          java-version-file: .github/workflows/.java-version
-      - uses: gradle/actions/setup-gradle@v6
-
-      - run: ./gradlew publishToMavenCentral --no-configuration-cache
-        env:
-          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_CENTRAL_USERNAME }}
-          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_CENTRAL_PASSWORD }}
-          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_PRIVATE_KEY }}
-          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.GPG_PASSWORD }}
-
-      - uses: actions/download-artifact@v8
-        with:
-          name: html-docs
-          path: html-docs
-
-      - uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: site
-          FOLDER: html-docs
-          TARGET_FOLDER: docs/latest/
-          CLEAN: true

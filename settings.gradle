@@ -23,12 +23,9 @@ include ':mosaic-testing'
 include ':mosaic-tty'
 include ':mosaic-tty-terminal'
 
-include ':samples:counter'
-include ':samples:demo'
-include ':samples:jest'
-include ':samples:robot'
-include ':samples:rrtop'
-include ':samples:snake'
+// Samples are intentionally excluded from the build. This fork only exists to
+// publish the library modules; the upstream samples are kept for reference but
+// are not part of the build.
 
 include ':tools:raw-mode-echo'
 
