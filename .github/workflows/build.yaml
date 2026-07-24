@@ -263,7 +263,7 @@ jobs:
           fi
 
   publish:
-    if: ${{ github.ref == 'refs/heads/trunk' && github.repository == 'JakeWharton/mosaic' }}
+    if: ${{ github.ref == 'refs/heads/trunk' && github.repository == 'Julius-Babies/mosaic' }}
     runs-on: macos-15
     needs:
       - final-status

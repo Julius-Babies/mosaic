@@ -14,7 +14,7 @@ develocity {
 	}
 }
 
-rootProject.name = 'mosaic'
+rootProject.name = 'mosaic-fork'
 
 include ':mosaic-animation'
 include ':mosaic-runtime'
