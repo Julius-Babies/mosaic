@@ -85,16 +85,22 @@ jobs:
           java-version-file: .github/workflows/.java-version
       - uses: gradle/actions/setup-gradle@v6
 
-      # mosaic-tty native tests run in the matrix job above; run the host tests
-      # for the remaining modules here and assemble/validate everything else.
+      # Assemble everything and run API checks without executing the
+      # per-platform tests (the cross-compiled ones cannot run on the host).
       - run: >
           ./gradlew
           --continue
           build
           -x allTests
           -x linuxX64Test
-          -x linuxArm64Test
+          -x macosArm64Test
           -x mingwX64Test
+
+      # mosaic-tty native tests run in the matrix job above; run the macOS host
+      # tests for the remaining modules here to get some test coverage.
+      - run: >
+          ./gradlew
+          --continue
           macosArm64Test
           -x :mosaic-tty:macosArm64Test
 
