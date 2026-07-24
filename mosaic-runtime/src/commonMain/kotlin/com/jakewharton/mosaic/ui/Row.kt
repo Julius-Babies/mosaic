@@ -1,4 +1,3 @@
-@file:JvmName("Row")
 
 package com.jakewharton.mosaic.ui
 
@@ -8,7 +7,6 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.remember
 import com.jakewharton.mosaic.layout.MeasurePolicy
 import com.jakewharton.mosaic.modifier.Modifier
-import kotlin.jvm.JvmName
 
 @Composable
 public fun Row(

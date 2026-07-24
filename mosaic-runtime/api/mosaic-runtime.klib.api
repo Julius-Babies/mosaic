@@ -5,7 +5,7 @@
 // - Show manifest properties: true
 // - Show declarations: true
 
-// Library unique name: <com.jakewharton.mosaic:mosaic-runtime>
+// Library unique name: <es.jvbabi:mosaic-runtime>
 open annotation class com.jakewharton.mosaic.ui/LayoutScopeMarker : kotlin/Annotation { // com.jakewharton.mosaic.ui/LayoutScopeMarker|null[0]
     constructor <init>() // com.jakewharton.mosaic.ui/LayoutScopeMarker.<init>|<init>(){}[0]
 }

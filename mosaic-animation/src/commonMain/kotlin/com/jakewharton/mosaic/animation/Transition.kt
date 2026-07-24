@@ -27,7 +27,6 @@ import com.jakewharton.mosaic.ui.unit.IntOffset
 import com.jakewharton.mosaic.ui.unit.IntSize
 import kotlin.coroutines.coroutineContext
 import kotlin.coroutines.resume
-import kotlin.jvm.JvmName
 import kotlin.math.max
 import kotlin.math.roundToLong
 import kotlinx.coroutines.CancellableContinuation
@@ -1004,7 +1003,6 @@ internal constructor(
 	 * the [Transition] will not resume normal animation runs.
 	 */
 	@RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-	@JvmName("seek")
 	internal fun setPlaytimeAfterInitialAndTargetStateEstablished(
 		initialState: S,
 		targetState: S,

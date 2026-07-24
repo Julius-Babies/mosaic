@@ -1,4 +1,3 @@
-@file:JvmName("Box")
 
 package com.jakewharton.mosaic.ui
 
@@ -15,7 +14,6 @@ import com.jakewharton.mosaic.layout.Placeable
 import com.jakewharton.mosaic.modifier.Modifier
 import com.jakewharton.mosaic.ui.unit.Constraints
 import com.jakewharton.mosaic.ui.unit.IntSize
-import kotlin.jvm.JvmName
 import kotlin.math.max
 
 @Composable

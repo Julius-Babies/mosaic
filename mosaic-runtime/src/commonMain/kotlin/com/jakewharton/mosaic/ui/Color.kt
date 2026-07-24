@@ -4,10 +4,8 @@ package com.jakewharton.mosaic.ui
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import kotlin.jvm.JvmInline
 
 @Immutable
-@JvmInline
 public value class Color internal constructor(
 	@PublishedApi
 	internal val value: Int,

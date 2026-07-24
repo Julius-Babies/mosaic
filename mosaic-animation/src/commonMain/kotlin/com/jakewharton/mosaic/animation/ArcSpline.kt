@@ -2,7 +2,6 @@
 
 package com.jakewharton.mosaic.animation
 
-import kotlin.jvm.JvmField
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.cos
@@ -196,21 +195,16 @@ internal class ArcSpline(arcModes: IntArray, timePoints: FloatArray, y: Array<Fl
 		private val arcVelocity: Float
 		private val vertical: Float
 
-		@JvmField
 		internal val ellipseA: Float
 
-		@JvmField
 		internal val ellipseB: Float
 
-		@JvmField
 		internal val isLinear: Boolean
 
 		// also used to cache the slope in the unused center
-		@JvmField
 		internal val ellipseCenterX: Float
 
 		// also used to cache the slope in the unused center
-		@JvmField
 		internal val ellipseCenterY: Float
 
 		internal inline val linearDX: Float

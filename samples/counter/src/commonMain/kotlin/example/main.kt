@@ -1,4 +1,3 @@
-@file:JvmName("Main")
 
 package example
 
@@ -11,7 +10,6 @@ import androidx.compose.runtime.setValue
 import com.jakewharton.mosaic.NonInteractivePolicy.Ignore
 import com.jakewharton.mosaic.runMosaicBlocking
 import com.jakewharton.mosaic.ui.Text
-import kotlin.jvm.JvmName
 import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.delay
 

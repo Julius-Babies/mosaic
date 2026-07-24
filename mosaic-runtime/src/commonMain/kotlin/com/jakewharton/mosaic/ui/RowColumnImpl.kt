@@ -11,7 +11,6 @@ import com.jakewharton.mosaic.layout.Placeable
 import com.jakewharton.mosaic.ui.LayoutOrientation.Horizontal
 import com.jakewharton.mosaic.ui.LayoutOrientation.Vertical
 import com.jakewharton.mosaic.ui.unit.Constraints
-import kotlin.jvm.JvmInline
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -161,7 +160,6 @@ internal sealed class CrossAxisAlignment {
 /**
  * Box [Constraints], but which abstract away width and height in favor of main axis and cross axis.
  */
-@JvmInline
 internal value class OrientationIndependentConstraints private constructor(
 	private val value: Constraints,
 ) {

@@ -4,7 +4,6 @@ package com.jakewharton.mosaic.ui.unit
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import kotlin.jvm.JvmInline
 import kotlin.math.roundToInt
 
 /**
@@ -17,7 +16,6 @@ public fun IntOffset(x: Int, y: Int): IntOffset = IntOffset(packInts(x, y))
  * A two-dimensional position using [Int] cells for units
  */
 @Immutable
-@JvmInline
 public value class IntOffset internal constructor(@PublishedApi internal val packedValue: Long) {
 
 	/**

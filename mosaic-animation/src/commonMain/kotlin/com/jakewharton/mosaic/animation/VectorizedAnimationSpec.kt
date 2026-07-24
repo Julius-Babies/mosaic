@@ -5,7 +5,6 @@ import androidx.collection.IntObjectMap
 import androidx.collection.MutableIntList
 import androidx.collection.MutableIntObjectMap
 import com.jakewharton.mosaic.animation.AnimationConstants.DefaultDurationMillis
-import kotlin.jvm.JvmInline
 import kotlin.math.min
 
 /**
@@ -486,7 +485,6 @@ internal data class VectorizedKeyframeSpecElementInfo<V : AnimationVector>(
  * @see ArcLinear
  * @see ArcAnimationSpec
  */
-@JvmInline
 public value class ArcMode internal constructor(internal val value: Int) {
 
 	public companion object {

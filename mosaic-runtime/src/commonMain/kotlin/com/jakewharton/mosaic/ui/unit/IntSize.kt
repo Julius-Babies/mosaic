@@ -4,7 +4,6 @@ package com.jakewharton.mosaic.ui.unit
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import kotlin.jvm.JvmInline
 
 /**
  * Constructs an [IntSize] from width and height [Int] values.
@@ -16,7 +15,6 @@ public fun IntSize(width: Int, height: Int): IntSize = IntSize(packInts(width, h
  * A two-dimensional size class used for measuring in [Int] cells.
  */
 @Immutable
-@JvmInline
 public value class IntSize internal constructor(@PublishedApi internal val packedValue: Long) {
 
 	/**

@@ -1,4 +1,3 @@
-@file:JvmName("Text")
 
 package com.jakewharton.mosaic.ui
 
@@ -9,7 +8,6 @@ import com.jakewharton.mosaic.modifier.Modifier
 import com.jakewharton.mosaic.text.AnnotatedString
 import com.jakewharton.mosaic.text.AnnotatedStringTextLayout
 import com.jakewharton.mosaic.text.StringTextLayout
-import kotlin.jvm.JvmName
 
 @Composable
 @MosaicComposable

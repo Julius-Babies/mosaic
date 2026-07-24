@@ -1,4 +1,3 @@
-@file:JvmName("Main")
 
 package example
 
@@ -13,7 +12,6 @@ import com.jakewharton.mosaic.terminal.KeyboardEvent
 import com.jakewharton.mosaic.terminal.KeyboardEvent.Companion.ModifierCtrl
 import com.jakewharton.mosaic.tty.Tty
 import com.jakewharton.mosaic.tty.terminal.EventParser
-import kotlin.jvm.JvmName
 import kotlinx.coroutines.CoroutineStart.UNDISPATCHED
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.launch

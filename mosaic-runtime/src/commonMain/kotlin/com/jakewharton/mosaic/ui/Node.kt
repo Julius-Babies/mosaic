@@ -13,7 +13,6 @@ import com.jakewharton.mosaic.layout.MosaicNode
 import com.jakewharton.mosaic.modifier.Modifier
 import com.jakewharton.mosaic.modifier.materialize
 import com.jakewharton.mosaic.ui.unit.Constraints
-import kotlin.jvm.JvmField
 
 @Composable
 @MosaicComposable
@@ -38,16 +37,12 @@ internal inline fun Node(
 	)
 }
 
-@JvmField
 internal val SetModifier: MosaicNode.(Modifier) -> Unit = { setModifier(it) }
 
-@JvmField
 internal val SetMeasurePolicy: MosaicNode.(MeasurePolicy) -> Unit = { measurePolicy = it }
 
-@JvmField
 internal val SetDebugPolicy: MosaicNode.(DebugPolicy) -> Unit = { debugPolicy = it }
 
-@JvmField
 internal val NodeFactory: () -> MosaicNode = {
 	MosaicNode(
 		measurePolicy = ThrowingPolicy,

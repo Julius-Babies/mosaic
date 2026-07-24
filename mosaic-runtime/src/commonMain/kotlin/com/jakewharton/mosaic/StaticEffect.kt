@@ -1,4 +1,3 @@
-@file:JvmName("Static")
 
 package com.jakewharton.mosaic
 
@@ -11,7 +10,6 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.rememberCompositionContext
 import androidx.compose.runtime.staticCompositionLocalOf
-import kotlin.jvm.JvmName
 import kotlinx.coroutines.channels.SendChannel
 
 @Stable

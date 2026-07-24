@@ -5,10 +5,8 @@ package com.jakewharton.mosaic.ui
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import com.jakewharton.mosaic.ui.TextStyle.Companion.Empty
-import kotlin.jvm.JvmInline
 
 @Immutable
-@JvmInline
 // TODO private constructor once https://issuetracker.google.com/issues/404479708 is fixed.
 public value class TextStyle internal constructor(
 	@PublishedApi

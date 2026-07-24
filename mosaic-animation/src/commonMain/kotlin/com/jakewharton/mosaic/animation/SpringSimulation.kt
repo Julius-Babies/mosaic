@@ -5,13 +5,11 @@ package com.jakewharton.mosaic.animation
 import com.jakewharton.mosaic.animation.internal.packFloats
 import com.jakewharton.mosaic.animation.internal.unpackFloat1
 import com.jakewharton.mosaic.animation.internal.unpackFloat2
-import kotlin.jvm.JvmInline
 import kotlin.math.cos
 import kotlin.math.exp
 import kotlin.math.sin
 import kotlin.math.sqrt
 
-@JvmInline
 internal value class Motion(val packedValue: Long) {
 	inline val value: Float
 		get() = unpackFloat1(packedValue)

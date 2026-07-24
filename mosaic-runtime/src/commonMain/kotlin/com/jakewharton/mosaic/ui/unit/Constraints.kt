@@ -2,7 +2,6 @@ package com.jakewharton.mosaic.ui.unit
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import kotlin.jvm.JvmInline
 
 /**
  * Immutable constraints for measuring layouts, used by [layouts][com.jakewharton.mosaic.ui.Layout]
@@ -35,7 +34,6 @@ import kotlin.jvm.JvmInline
  * this range will fail.
  */
 @Immutable
-@JvmInline
 public value class Constraints(
 	@PublishedApi internal val value: Long,
 ) {

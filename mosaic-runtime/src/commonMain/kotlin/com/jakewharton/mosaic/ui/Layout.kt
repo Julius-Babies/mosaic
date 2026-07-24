@@ -1,4 +1,3 @@
-@file:JvmName("Layout")
 
 package com.jakewharton.mosaic.ui
 
@@ -11,7 +10,6 @@ import com.jakewharton.mosaic.layout.MeasureScope
 import com.jakewharton.mosaic.layout.Placeable
 import com.jakewharton.mosaic.modifier.Modifier
 import com.jakewharton.mosaic.ui.unit.Constraints
-import kotlin.jvm.JvmName
 
 internal fun interface NoContentMeasurePolicy {
 	fun NoContentMeasureScope.measure(): MeasureResult
