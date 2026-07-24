@@ -5,7 +5,7 @@
 // - Show manifest properties: true
 // - Show declarations: true
 
-// Library unique name: <com.jakewharton.mosaic:mosaic-animation>
+// Library unique name: <es.jvbabi:mosaic-animation>
 open annotation class com.jakewharton.mosaic.animation/ExperimentalAnimatableApi : kotlin/Annotation { // com.jakewharton.mosaic.animation/ExperimentalAnimatableApi|null[0]
     constructor <init>() // com.jakewharton.mosaic.animation/ExperimentalAnimatableApi.<init>|<init>(){}[0]
 }

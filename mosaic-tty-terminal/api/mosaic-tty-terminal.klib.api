@@ -5,7 +5,7 @@
 // - Show manifest properties: true
 // - Show declarations: true
 
-// Library unique name: <com.jakewharton.mosaic:mosaic-tty-terminal>
+// Library unique name: <es.jvbabi:mosaic-tty-terminal>
 final class com.jakewharton.mosaic.tty.terminal/EofException : kotlin/RuntimeException { // com.jakewharton.mosaic.tty.terminal/EofException|null[0]
     constructor <init>() // com.jakewharton.mosaic.tty.terminal/EofException.<init>|<init>(){}[0]
 }

@@ -5,7 +5,7 @@
 // - Show manifest properties: true
 // - Show declarations: true
 
-// Library unique name: <com.jakewharton.mosaic:mosaic-testing>
+// Library unique name: <es.jvbabi:mosaic-testing>
 abstract fun interface <#A: kotlin/Any?> com.jakewharton.mosaic.testing/SnapshotStrategy { // com.jakewharton.mosaic.testing/SnapshotStrategy|null[0]
     abstract fun create(com.jakewharton.mosaic/Mosaic): #A // com.jakewharton.mosaic.testing/SnapshotStrategy.create|create(com.jakewharton.mosaic.Mosaic){}[0]
 }
