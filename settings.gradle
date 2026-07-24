@@ -25,19 +25,11 @@ include ':mosaic-tty-terminal'
 
 include ':samples:counter'
 include ':samples:demo'
-include ':samples:java-tty'
 include ':samples:jest'
 include ':samples:robot'
 include ':samples:rrtop'
 include ':samples:snake'
 
 include ':tools:raw-mode-echo'
-include ':tools:terminal-capability'
 
 enableFeaturePreview('TYPESAFE_PROJECT_ACCESSORS')
-
-includeBuild('build-support') {
-	dependencySubstitution {
-		substitute module('com.jakewharton.mosaic.build:gradle-plugin') using project(':')
-	}
-}

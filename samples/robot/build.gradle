@@ -14,14 +14,6 @@ kotlin {
 		}
 	}
 
-	jvm {
-		binaries {
-			executable {
-				mainClass = 'example.RobotKt'
-			}
-		}
-	}
-
 	targets.withType(KotlinNativeTarget).configureEach { target ->
 		target.binaries.executable {
 			entryPoint = 'example.main'

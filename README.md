@@ -1,4 +1,16 @@
-# Mosaic
+# Mosaic (fork)
+
+> [!NOTE]
+> **This is a fork of [JakeWharton/mosaic](https://github.com/JakeWharton/mosaic).**
+>
+> It exists solely to ship the fix from [JakeWharton/mosaic#1167](https://github.com/JakeWharton/mosaic/issues/1167)
+> (graceful handling of out-of-bounds pixel access during terminal resize) as a published artifact.
+>
+> Compared to upstream it is **Kotlin/Native only** — all JVM targets (including the JNI and Zig
+> tooling) have been removed. It is published as `es.jvbabi:mosaic-*` purely for use by
+> [Julius-Babies/werkbank](https://github.com/Julius-Babies/werkbank/) and is not intended as a
+> general-purpose replacement for upstream Mosaic. Use the original project unless you specifically
+> need this fix on native targets.
 
 An experimental tool for building console UI in Kotlin using the Jetpack Compose compiler/runtime.
 Inspired by [Ink](https://github.com/vadimdemedes/ink).
@@ -65,7 +77,7 @@ Mosaic itself can then be added like any other dependency:
 
 ```groovy
 dependencies {
-  implementation("com.jakewharton.mosaic:mosaic-runtime:0.18.0")
+  implementation("es.jvbabi:mosaic-runtime:0.18.0")
 }
 ```
 
@@ -83,7 +95,7 @@ repository {
   }
 }
 dependencies {
-  implementation("com.jakewharton.mosaic:mosaic-runtime:0.19.0-SNAPSHOT")
+  implementation("es.jvbabi:mosaic-runtime:0.19.0-SNAPSHOT")
 }
 ```
 

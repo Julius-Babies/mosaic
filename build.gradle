@@ -13,10 +13,7 @@ buildscript {
 		classpath libs.spotlessGradlePlugin
 		classpath libs.binaryCompatibilityValidatorGradlePlugin
 		classpath libs.cklibGradlePlugin
-		classpath libs.jextractGradlePlugin
-		classpath libs.testDistributionGradlePlugin
 		classpath libs.burstGradlePlugin
-		classpath 'com.jakewharton.mosaic.build:gradle-plugin'
 	}
 	repositories {
 		mavenCentral()
